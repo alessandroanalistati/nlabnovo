@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lista de REAGENTES
+{% endblock title %}
+{% block content %}
+<h4><strong>LISTA DE REAGENTES</strong></h4>
+<div style="overflow: auto; width: 1080px">
+    <table class="table table-striped">   
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Fórmula Químicae</th>               
+            <th>Grau de Pureza</th>               
+            <th>Unidade</th>               
+            <th>Marca</th> 
+            <th>Quantidade</th>   
+            <th>Data de Validade</th>  
+            <th>Controle da PF / Exército</th>           
+            <th>Ficha Técnica</th>   
+            <th>Massa Molecular</th> 
+            <th>Densidade</th>   
+            <th>Disponibilidade</th>    
+            <th>Sala</th>   
+            <th>Armario</th>  
+            <th>Bancada</th>   
+            <th>Estante</th>   
+            <th>Prateleira</th>   
+            <th>Gaveta</th>
+            <th>Observação</th>                            
+            <th>Ações</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        {% for i in reagentes %}
+        <tr>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.nome}}</a></td>           
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.formula_q}}</a></td>           
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.grau_p}}</a></td>           
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.unidade}}</a></td>           
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.marca}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.quantidade}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.data_validade}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.controle_pfex}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.ficha_tec}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.massamolecular}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.densidade}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.disponibilidade}}</a></td>           
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.sala}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.armario}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.bancada}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.estante}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.prateleira}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.gaveta}}</a></td>
+            <td><a href="{% url 'sisnlab:visualizar_reagente' i.id %}">{{i.obs}}</a></td>
+
+            <td>
+                <a href="{% url 'sisnlab:editar_reagente' i.id %}" button class="btn btn-success btn-sm">Editar</a>
+                <a href="{% url 'sisnlab:remover_reagente' i.id %}" button class="btn btn-danger btn-sm">Remover</button> </a>
+                <a href="{% url 'sisnlab:visualizar_reagente' i.id %}" button class="btn btn-info btn-sm">Visualizar</button> </a>
+                
+
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+ </div>
+<a href="{% url 'sisnlab:cadastrar_reagente' %}">
+    <button class="btn btn-primary ">Cadastrar</button>
+</a>
+{% endblock content %}

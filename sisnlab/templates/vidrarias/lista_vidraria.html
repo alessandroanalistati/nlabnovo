@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lista de vidraria
+{% endblock title %}
+
+{{% block content %}
+ <h4><strong>DADOS DO VIDRARIA</strong></h4>
+<div class="card">
+    <div class="card-header">       
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Nome: {{vidraria.nome}}</h5>       
+        <h5 class="card-title">Marca: {{vidraria.marca}}</h5>
+        <h5 class="card-title">Data da Compra: {{vidraria.data_compra}}</h5>
+        <h5 class="card-title">data_compra: {{vidraria.data_compra}}</h5>
+        <h5 class="card-title">Origem: {{vidraria.origem}}</h5>
+        <h5 class="card-title">Ficha Técnica: {{vidraria.ficha_tec}}</h5>
+        <h5 class="card-title">Especficação técnica: {{vidraria.especficacao_t}}</h5>
+        <h5 class="card-title">Quantidade: {{vidraria.quantidade}}</h5>
+        <h5 class="card-title">Sala: {{vidraria.sala}}</h5>
+        <h5 class="card-title">Armario: {{vidraria.armario}}</h5>
+        <h5 class="card-title">Bancada: {{vidraria.bancada}}</h5>
+        <h5 class="card-title">Estante: {{vidraria.estante}}</h5>
+        <h5 class="card-title">Prateleira: {{vidraria.prateleira}}</h5>
+        <h5 class="card-title">Gaveta: {{vidraria.gaveta}}</h5>
+        <h5 class="card-title">Observações: {{vidraria.obs}}</h5>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lista de DIVERSO
+{% endblock title %}
+
+{{% block content %}
+ <h4><strong>DADOS DO DIVERSO</strong></h4>
+<div class="card">
+    <div class="card-header">       
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Nome: {{diverso.nome}}</h5>      
+        <h5 class="card-title">Marca: {{diverso.marca}}</h5>   
+        <h5 class="card-title">Unidade: {{diverso.unidade}}</h5>      
+        <h5 class="card-title">Quantidade : {{diverso.quantidade}}</h5>
+        <h5 class="card-title">Origem : {{diverso.origem}}</h5>       
+        <h5 class="card-title">Ficha Técnica: {{diverso.ficha_tec}}</h5>
+        <h5 class="card-title">Sala: {{diverso.sala}}</h5>
+        <h5 class="card-title">Armario: {{diverso.armario}}</h5>
+        <h5 class="card-title">Bancada: {{diverso.bancada}}</h5>
+        <h5 class="card-title">Estante: {{diverso.estante}}</h5>
+        <h5 class="card-title">Prateleira: {{diverso.prateleira}}</h5>
+        <h5 class="card-title">Gaveta: {{diverso.gaveta}}</h5>        
+        <h5 class="card-title">Observações: {{diverso.obs}}</h5>
+        <h5 class="card-title">Imagem: {{diverso.imagem}}</h5>   
+
+     
+    </div>
+</div>
+
+{% endblock content %}
