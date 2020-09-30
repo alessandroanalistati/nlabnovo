@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+{{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4><strong> Tem certeza que deseja remover a EQUIPAMENTO abaixo?</strong></h4>
+    </div>
+    
+    <div class="card-body">
+        <h5 class="card-title">Usuário: {{equipamento.usuario}}</h5>        
+        <h5 class="card-title">Nome: {{equipamento.nome}}</h5>        
+        <h5 class="card-title">Tombo: {{equipamento.tombo}}</h5>
+        <h5 class="card-title">Marca: {{equipamento.marca}}</h5>
+        <h5 class="card-title">Data da Compra: {{equipamento.data_compra}}</h5>
+        <h5 class="card-title">data_compra: {{equipamento.data_compra}}</h5>
+        <h5 class="card-title">Data da Ultima Manutenção: {{equipamento.data_ultim_m}}</h5>
+        <h5 class="card-title">Origem: {{equipamento.origem}}</h5>
+        <h5 class="card-title">Ficha Técnica: {{equipamento.ficha_tec}}</h5>
+        <h5 class="card-title">Especficação técnica: {{equipamento.especficacao_t}}</h5>
+        <h5 class="card-title">Calibragem: {{equipamento.calibragem}}</h5>
+        <h5 class="card-title">Sala: {{equipamento.sala}}</h5>
+        <h5 class="card-title">Armario: {{equipamento.armario}}</h5>
+        <h5 class="card-title">Bancada: {{equipamento.bancada}}</h5>
+        <h5 class="card-title">Estante: {{equipamento.estante}}</h5>
+        <h5 class="card-title">Prateleira: {{equipamento.prateleira}}</h5>
+        <h5 class="card-title">Gaveta: {{equipamento.gaveta}}</h5>
+        <h5 class="card-title">Observações: {{equipamento.obs}}</h5>
+        <h5 class="card-title">Foto : <img src="{{equipamento.foto.url}}" alt="Norway" style="width:25%"> </h5> 
+
+        <form method="post">
+            {% csrf_token %}
+             <a href="{{request.META.HTTP_REFERER}}" class="btn btn-primary">Voltar</a>
+            <button class="btn btn-danger" type="submit">Remover</button>
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock content %}

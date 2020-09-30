@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+{{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4><strong> DADOS DA VIDRARIA</strong></h4>
+    </div>
+    
+    <div class="card-body">
+        <h5 class="card-title">Usuario: {{vidraria.usuario}}</h5>   
+        <h5 class="card-title">Nome: {{vidraria.nome}}</h5>       
+        <h5 class="card-title">Marca: {{vidraria.marca}}</h5>
+        <h5 class="card-title">Data da Compra: {{vidraria.data_compra}}</h5>
+        <h5 class="card-title">data_compra: {{vidraria.data_compra}}</h5>
+        <h5 class="card-title">Origem: {{vidraria.origem}}</h5>
+        <h5 class="card-title">Ficha Técnica: {{vidraria.ficha_tec}}</h5>
+        <h5 class="card-title">Especficação técnica: {{vidraria.especficacao_t}}</h5>
+        <h5 class="card-title">Quantidade: {{vidraria.quantidade}}</h5>
+        <h5 class="card-title">Sala: {{vidraria.sala}}</h5>
+        <h5 class="card-title">Armario: {{vidraria.armario}}</h5>
+        <h5 class="card-title">Bancada: {{vidraria.bancada}}</h5>
+        <h5 class="card-title">Estante: {{vidraria.estante}}</h5>
+        <h5 class="card-title">Prateleira: {{vidraria.prateleira}}</h5>
+        <h5 class="card-title">Gaveta: {{vidraria.gaveta}}</h5>
+        <h5 class="card-title">Observações: {{vidraria.obs}}</h5>
+        <h5 class="card-title">Foto : <img src="{{vidraria.foto.url}}" alt="Norway" style="width:25%"> </h5>  
+
+            <form method="post">
+            {% csrf_token %}
+             <a href="{{request.META.HTTP_REFERER}}" class="btn btn-primary">Voltar</a>            
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock content %}

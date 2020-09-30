@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lista de Bancada
+{% endblock title %}
+
+{{% block content %}
+ <h4><strong>DADOS DA BANCADA</strong></h4>
+<div class="card">
+    <div class="card-header">   
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Usuário: {{armario.usuario}}</h5>
+        <h5 class="card-title">Nome: {{bancada.nome}}</h5>
+        <h5 class="card-title">Sibla: {{bancada.sibla}}</h5>
+        <h5 class="card-title">Tombo: {{bancada.tombo}}</h5>
+        <h5 class="card-title">Sala: {{bancada.sala}}</h5>
+        <h5 class="card-title">Observações: {{bancada.obs}}</h5>
+
+    </div>
+</div>
+
+{% endblock content %}

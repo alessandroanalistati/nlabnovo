@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load meus_filtros %}
+{% block title %}
+Cadastro DE SOLUÇÃO
+{% endblock title %}
+
+{% block content %}
+<h4><strong>CADASTRAR DE SOLUÇÃO</strong></h4>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+     
+    <label>Usuario : </label>
+   {{ user.get_username }}   
+        
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.nome.errors }}
+        <label>Nome : </label>
+        {{ form_pedidosolucao.nome|addclass:'form-control' }}
+    </div>
+ 
+    <div class="form-group">
+        {{ form_pedidosolucao.concentracao.errors }}
+        <label>Concentração : </label>
+        {{ form_pedidosolucao.concentracao|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.data_producao.errors }}
+        <label>Data de Produção : </label>
+        {{ form_pedidosolucao.data_producao|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.unidade.errors }}
+        <label>Unidade : </label>
+        {{ form_pedidosolucao.unidade|addclass:'form-control' }}
+    </div>  
+
+    <div class="form-group">
+        {{ form_pedidosolucao.quantidade.errors }}
+        <label>Quantidade : </label>
+        {{ form_pedidosolucao.quantidade|addclass:'form-control' }}
+    </div>
+    
+    <div class="form-group">
+        {{ form_pedidosolucao.status.errors }}
+        <label>Status : </label>
+        {{ form_pedidosolucao.status|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.sala.errors }}
+        <label>Sala : </label>
+        {{ form_pedidosolucao.sala|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.armario.errors }}
+        <label>Armario: </label>
+        {{ form_pedidosolucao.armario|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.bancada.errors }}
+        <label>Bancada : </label>
+        {{ form_pedidosolucao.bancada|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.estante.errors }}
+        <label>Estante : </label>
+        {{ form_pedidosolucao.estante|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.prateleira.errors }}
+        <label>Prateleira : </label>
+        {{ form_pedidosolucao.prateleira|addclass:'form-control' }}
+    </div>
+    
+    <div class="form-group">
+        {{ form_pedidosolucao.gaveta.errors }}
+        <label>Gaveta : </label>
+        {{ form_pedidosolucao.gaveta|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        {{ form_pedidosolucao.obs.errors }}
+        <label>Obs: </label>
+        {{ form_pedidosolucao.obs|addclass:'form-control' }}
+    </div>
+
+    <div class="form-group">
+        <input type="submit" name="Cadastrar">
+    </div>
+</form>
+{% endblock content %}
